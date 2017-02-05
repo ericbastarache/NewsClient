@@ -3,6 +3,7 @@ const path = require('path');
 const url = require('url');
 
 require('dotenv').config();
+require('electron-reload')(__dirname);
 
 let win = null;
 
