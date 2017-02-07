@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { NewsNavbarComponent } from './news-navbar/news-navbar.component';
+import { NewsListComponent } from './news-list/news-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewsNavbarComponent
+    NewsNavbarComponent,
+    NewsListComponent
   ],
   imports: [
     BrowserModule,
