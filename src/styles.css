@@ -5,3 +5,12 @@ html {
 body {
   margin-bottom: 60px;
 }
+header {
+  background-color: #000000;
+  height: 80px;
+  width: 100%;
+}
+header h2 {
+  color: #ffffff;
+  text-align: center;
+}
