@@ -1,5 +1,6 @@
 @black: #000;
 @white: #fff;
+@grey: #ccc;
 
 html {
   position: relative;
@@ -13,13 +14,27 @@ body {
 
 header {
   background-color: @black;
-  height: 80px;
+  height: 5em;
   width: 100%;
 
   h2 {
     margin-top: 0;
-    padding-top: 20px;
+    //padding-top: 1.250em;
     color: @white;
     text-align: center;
+  }
+}
+
+ul.news-sources {
+  list-style: none;
+
+  li.news-item {
+    margin: 0.313em;
+    border: 1px solid @grey;
+    padding: 0.313em;
+
+    &:hover {
+      background-color: #a9a9a9;
+    }
   }
 }
