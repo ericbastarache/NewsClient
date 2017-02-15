@@ -7,11 +7,13 @@ import { AppComponent } from './app.component';
 import { NewsListComponent } from './news-list/news-list.component';
 
 import { NewsService } from './news.service';
+import { NewsNavbarComponent } from './news-navbar/news-navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NewsListComponent
+    NewsListComponent,
+    NewsNavbarComponent
   ],
   imports: [
     BrowserModule,
