@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
+import 'rxjs/Rx';
 
 @Injectable()
 export class NewsService {
@@ -8,10 +8,9 @@ export class NewsService {
 
   constructor(private http: Http) { }
 
-  /*getAll() {
-    let allNews = this.http
-      .get(`${this.baseUrl}/sources?lang=en`)
-      .map('nothing');
-    return allNews;
-  }*/
+  getSources () {
+    let sources = this.http.get(`${this.baseUrl}/sources?lang=en`)
+      .map((response: Response) => response.json());
+    return sources;
+  }
 }
