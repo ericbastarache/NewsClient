@@ -44,3 +44,30 @@ ul.article-list li.article-item a {
 ul.article-list li.article-item a:hover {
   cursor: pointer;
 }
+div.article-item {
+  border: 1px solid #000000;
+  margin-top: 0.313em;
+}
+div.article-item h1.article-title {
+  text-decoration: underline;
+}
+div.article-item h6.date {
+  color: #cccccc;
+}
+div.article-item p.article-excerpt {
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+  line-height: 1em;
+}
+div.article-item a.back-link {
+  padding: 0.313em;
+  background-color: #000000;
+  border: 1px solid #1a1a1a;
+  border-radius: 0.313em;
+  color: #ffffff;
+  text-decoration: none;
+}
+div.article-item a.back-link:hover {
+  transition: 0.5s ease-in-out;
+  background-color: #333333;
+}
