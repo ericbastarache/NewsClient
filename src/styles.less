@@ -63,8 +63,13 @@ ul.article-list {
 div.article-item {
   border: 1px solid @black;
   margin-top: 0.313em;
+  padding-bottom: 2.875em;
   h1.article-title {
     text-decoration: underline;
+  }
+
+  img {
+    margin: 0 auto;
   }
 
   h6.date {
@@ -72,22 +77,30 @@ div.article-item {
   }
 
   p.article-excerpt {
-    font-size: 14px;
+    font-size: 16px;
     font-family: 'Arial', sans-serif;
     line-height: 1em;
   }
 
-  a.back-link {
-    padding: 0.313em;
+  .links {
+    padding: 0.625em;
     background-color: @black;
     border: 1px solid lighten(@black, 10%);
-    border-radius: 0.313em;
     color: @white;
     text-decoration: none;
 
     &:hover {
+      cursor: pointer;
       transition: 0.5s ease-in-out;
       background-color: lighten(@black, 20%);
     }
+  }
+
+  a.back-link {
+    .links;
+  }
+
+  a.read-full {
+    .links;
   }
 }
