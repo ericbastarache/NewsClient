@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+
 import { AppComponent } from './app.component';
 import { NewsListComponent } from './news-list/news-list.component';
 
-import { NewsService } from './news.service';
+import { NewsService } from './services/news.service';
 import { NewsNavbarComponent } from './news-navbar/news-navbar.component';
+
 
 @NgModule({
   declarations: [
