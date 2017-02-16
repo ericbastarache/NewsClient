@@ -15,9 +15,9 @@ import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleItemComponent } from './article-item/article-item.component';
 
 const appRoutes: Routes = [
-  { path: 'article-list', component: ArticleListComponent },
+  { path: 'article-list/:id', component: ArticleListComponent },
   { path: 'article-item', component: ArticleItemComponent },
-  { path: '',
+  { path: '**',
     redirectTo: '/',
     pathMatch: 'full'
   }
