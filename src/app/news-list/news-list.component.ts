@@ -11,15 +11,6 @@ export class NewsListComponent implements OnInit {
   source = [];
   constructor(private newsService: NewsService) { }
 
-  logName () {
-    this.newsService.getName()
-      .subscribe(
-        (data: any) => {
-          console.log(data.sources.name);
-        }
-      );
-  }
-
   ngOnInit() {
     this.newsService.getSources()
       .subscribe(

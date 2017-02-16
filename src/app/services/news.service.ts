@@ -13,10 +13,4 @@ export class NewsService {
       .map((response: Response) => response.json());
     return sources;
   }
-
-  getName () {
-    let sourceName = this.http.get(`${this.baseUrl}/sources?lang=en`)
-      .map((response: Response)=> response.json());
-    return sourceName;
-  }
 }
