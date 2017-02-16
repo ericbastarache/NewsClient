@@ -27,3 +27,20 @@ ul.news-sources li.news-item {
 ul.news-sources li.news-item:hover {
   background-color: #a9a9a9;
 }
+ul.article-list {
+  list-style: none;
+}
+ul.article-list li.article-item {
+  padding: 0.500em;
+  border: 1px solid #cccccc;
+}
+ul.article-list li.article-item:hover {
+  background-color: #cccccc;
+}
+ul.article-list li.article-item a {
+  text-decoration: none;
+  color: #000000;
+}
+ul.article-list li.article-item a:hover {
+  cursor: pointer;
+}
