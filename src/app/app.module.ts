@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { RouterModule, Routes } from '@angular/router';
 
+
 import { AppComponent } from './app.component';
 import { NewsListComponent } from './news-list/news-list.component';
 
