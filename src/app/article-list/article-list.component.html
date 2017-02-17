@@ -1,6 +1,6 @@
 <ul class="article-list">
   <li *ngFor="let article of list">
-    <a routerLink="['/article-item', article.id']">
+    <a routerLink="['/article-item', article.url']">
       <h1 class="text-center">{{article.title}}</h1>
       <h6 class="text-center">{{article.author}}/{{article.publishedAt}}</h6>
     </a>
