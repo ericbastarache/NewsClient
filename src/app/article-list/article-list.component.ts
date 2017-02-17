@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-article-list',
@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: []
 })
 export class ArticleListComponent implements OnInit {
-
+  @Input() sourceID: number;
+  
   constructor() { }
 
   ngOnInit() {
