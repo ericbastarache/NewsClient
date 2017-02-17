@@ -3,7 +3,9 @@ const path = require('path');
 const url = require('url');
 
 require('dotenv').config();
-require('electron-reload')(__dirname);
+require('electron-reload')(__dirname, {
+  electron: require(`${__dirname}/../../node_modules/electron`)
+});
 
 let win = null;
 
