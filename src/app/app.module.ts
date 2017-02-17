@@ -14,7 +14,6 @@ import { NewsNavbarComponent } from './news-navbar/news-navbar.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 
 const appRoutes: Routes = [
-  // { path: 'article-list', component: ArticleListComponent },
   { path: 'article-list/:id', component: ArticleListComponent },
   { path: '**',
     redirectTo: '/',
