@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { RouterModule, Routes } from '@angular/router';
 
+import { Ng2Bs3ModalModule } from 'ng2-bs3-modal/ng2-bs3-modal';
 
 import { AppComponent } from './app.component';
 import { NewsListComponent } from './news-list/news-list.component';
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    Ng2Bs3ModalModule
   ],
   providers: [NewsService],
   bootstrap: [AppComponent]
