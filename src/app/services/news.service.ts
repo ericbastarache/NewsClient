@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Params, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
 import 'rxjs/Rx';
 
@@ -8,7 +8,7 @@ import 'rxjs/Rx';
 export class NewsService {
   private baseUrl: string = 'https://newsapi.org/v1';
   id: string;
-  private subscription: Subscription;
+  //private subscription: Subscription;
 
   constructor(private http: Http, private activeRoute: ActivatedRoute) {
     activeRoute.queryParams.subscribe(
