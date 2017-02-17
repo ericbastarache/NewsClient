@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NewsService } from '../services/news.service';
 import { Response } from '@angular/http';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-news-list',
@@ -9,7 +10,11 @@ import { Response } from '@angular/http';
 })
 export class NewsListComponent implements OnInit {
   source = [];
-  constructor(private newsService: NewsService) { }
+  id: string;
+  
+  constructor(private newsService: NewsService, private router: Router, private activeRoute: ActivatedRoute) {
+
+  }
 
   ngOnInit() {
     this.newsService.getSources()
