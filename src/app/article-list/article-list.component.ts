@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { NewsService } from '../services/news.service';
 
 @Component({
@@ -6,7 +6,7 @@ import { NewsService } from '../services/news.service';
   templateUrl: './article-list.component.html',
   styleUrls: []
 })
-export class ArticleListComponent implements OnInit {
+export class ArticleListComponent implements OnInit, OnDestroy {
   list = [];
   constructor(private newsService: NewsService) { }
 
@@ -17,6 +17,10 @@ export class ArticleListComponent implements OnInit {
           this.list = data.articles;
         }
       );
+  }
+
+  ngOnDestroy () {
+    
   }
 
 }
