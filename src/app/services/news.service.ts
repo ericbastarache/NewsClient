@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Params, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Rx';
 import 'rxjs/Rx';
 
@@ -10,7 +10,9 @@ export class NewsService {
   id: string;
   private subscription: Subscription;
 
-  constructor(private http: Http, private router: Router, private activeRoute: ActivatedRoute) { }
+  constructor(private http: Http, private activeRoute: ActivatedRoute) {
+    
+  }
 
   getSources () {
     let sources = this.http.get(`${this.baseUrl}/sources?lang=en`)
@@ -19,6 +21,8 @@ export class NewsService {
   }
 
   getArticleList () {
-
+    let articles = this.http.get(`${this.baseUrl}/articles?source=`+this.id+`&sortBy=latest&apiKey=a350d2b0e1624ed794b60ec15702029f`)
+      .map((response: Response) => response.json());
+    return articles;
   }
 }
