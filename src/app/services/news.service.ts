@@ -8,14 +8,12 @@ import 'rxjs/Rx';
 export class NewsService {
   private baseUrl: string = 'https://newsapi.org/v1';
   id: string;
-  articleId: string;
   private subscription: Subscription;
 
   constructor(private http: Http, private activeRoute: ActivatedRoute) {
     activeRoute.queryParams.subscribe(
       (param: any) => {
         this.id = param['id'];
-        this.articleId = param['articleId'] || 'None';
       }
     );
   }
@@ -30,9 +28,5 @@ export class NewsService {
     let articles = this.http.get(`${this.baseUrl}/articles?source=`+this.id+`&apiKey=a350d2b0e1624ed794b60ec15702029f`)
       .map((response: Response) => response.json());
     return articles;
-  }
-
-  getArticleById () {
-
   }
 }
