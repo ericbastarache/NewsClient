@@ -37,65 +37,13 @@ ul.article-list li.article-item {
 ul.article-list li.article-item:hover {
   background-color: #cccccc;
 }
-ul.article-list li.article-item a {
+ul.article-list li.article-item p.description {
+  font-size: 1em;
+}
+ul.article-list li.article-item a.url {
   text-decoration: none;
   color: #000000;
 }
-ul.article-list li.article-item a:hover {
+ul.article-list li.article-item a.url:hover {
   cursor: pointer;
-}
-div.article-item {
-  border: 1px solid #000000;
-  margin-top: 0.313em;
-  padding-bottom: 2.875em;
-}
-div.article-item h1.article-title {
-  text-decoration: underline;
-}
-div.article-item img {
-  margin: 0 auto;
-}
-div.article-item h6.date {
-  color: #cccccc;
-}
-div.article-item p.article-excerpt {
-  font-size: 16px;
-  font-family: 'Arial', sans-serif;
-  line-height: 1em;
-}
-div.article-item .links {
-  padding: 0.625em;
-  background-color: #000000;
-  border: 1px solid #1a1a1a;
-  color: #ffffff;
-  text-decoration: none;
-}
-div.article-item .links:hover {
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-  background-color: #333333;
-}
-div.article-item a.back-link {
-  padding: 0.625em;
-  background-color: #000000;
-  border: 1px solid #1a1a1a;
-  color: #ffffff;
-  text-decoration: none;
-}
-div.article-item a.back-link:hover {
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-  background-color: #333333;
-}
-div.article-item a.read-full {
-  padding: 0.625em;
-  background-color: #000000;
-  border: 1px solid #1a1a1a;
-  color: #ffffff;
-  text-decoration: none;
-}
-div.article-item a.read-full:hover {
-  cursor: pointer;
-  transition: 0.5s ease-in-out;
-  background-color: #333333;
 }

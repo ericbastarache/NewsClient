@@ -1,40 +1,9 @@
 <ul class="article-list">
-  <li *ngFor="let article of list">
-    <a routerLink="['/article-item', article.url']">
-      <h1 class="text-center">{{article.title}}</h1>
-      <h6 class="text-center">{{article.author}}/{{article.publishedAt}}</h6>
-    </a>
+  <li class="article-item" *ngFor="let article of list">
+    <h1 class="text-center">{{article.title}}</h1>
+    <img src="{{article.urlToImage}}" alt="" class="img-responsive">
+    <h4 class="text-center">{{article.author}}<span>{{article.publishedAt}}</span></h4>
+    <p class="description">{{article.description}}</p>
+    <a class="url" target="_blank" [href]="article.url">{{article.url}}</a>
   </li>
 </ul>
-<!--<ul class="article-list">
-  <li class="article-item">
-    <a routerLink="/article-item">
-      <h1 class="text-center">Article Name</h1>
-      <h6 class="text-center">Article Author/Date</h6>
-    </a>
-  </li>
-  <li class="article-item">
-    <a routerLink="/article-item">
-      <h1 class="text-center">Article Name</h1>
-      <h6 class="text-center">Article Author/Date</h6>
-    </a>
-  </li>
-  <li class="article-item">
-    <a routerLink="/article-item">
-      <h1 class="text-center">Article Name</h1>
-      <h6 class="text-center">Article Author/Date</h6>
-    </a>
-  </li>
-  <li class="article-item">
-    <a routerLink="/article-item">
-      <h1 class="text-center">Article Name</h1>
-      <h6 class="text-center">Article Author/Date</h6>
-    </a>
-  </li>
-  <li class="article-item">
-    <a routerLink="/article-item">
-      <h1 class="text-center">Article Name</h1>
-      <h6 class="text-center">Article Author/Date</h6>
-    </a>
-  </li>
-</ul>-->
