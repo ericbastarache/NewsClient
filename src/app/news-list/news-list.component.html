@@ -1,5 +1,5 @@
 <ul class="news-sources">
   <li class="news-item" *ngFor="let s of source">
-    <a [routerLink]="['/article-list', s.id, { id: s.id }]" routerLinkActive="active"><img class="img-responsive" src="{{s.urlsToLogos.small}}" alt="Placeholder Image"></a>
+    <a [routerLink]="['/article-list', s.id]" [queryParams]="{ id: s.id }" routerLinkActive="active"><img class="img-responsive" src="{{s.urlsToLogos.small}}" alt="Placeholder Image"></a>
   </li>
 </ul>
