@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron')
+const {app, BrowserWindow, Menu} = require('electron')
 const path = require('path');
 const url = require('url');
 
@@ -7,9 +7,9 @@ require('electron-reload')(__dirname, {
   electron: require(`${__dirname}/node_modules/electron`)
 });
 
-let win = null;
+let win;
 
-app.on('ready', () => {
+createWindow = () => {
   win = new BrowserWindow({width: 1000, height: 800});
 
   if(process.env.PACKAGE === 'true') {
@@ -20,22 +20,24 @@ app.on('ready', () => {
     }));
   } else {
     win.loadURL(process.env.HOST);
-    win.webContents.openDevTools();
+    win.webContents.openDevtools();
   }
 
   win.on('closed', () => {
     win = null;
   });
-});
+}
+
+app.on('ready', createWindow);
 
 app.on('activate', () => {
   if (win === null) {
-    createWindow()
+    createWindow();
   }
 });
 
 app.on('window-all-closed', () => {
-  if (process.platform != 'darwin') {
+  if (process.platform !== 'darwin') {
     app.quit();
   }
 });
