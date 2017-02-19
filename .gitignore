@@ -6,6 +6,8 @@
 
 # dependencies
 /node_modules
+/release-builds
+*.dmg
 
 # IDEs and editors
 /.idea
