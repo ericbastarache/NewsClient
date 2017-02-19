@@ -10,9 +10,9 @@
     "ng": "ng",
     "start": "ng build --base-href ./dist && electron .",
     "test": "ng test",
-    "package-mac": "ng build --environment=prod --base-href ./dist && electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/mac/icons/icon.icns --prune = true --out=release-builds",
+    "package-mac": "ng build --environment=prod --base-href ./dist && electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
     "package-win": "ng build --environment=prod --base-href ./dist && electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Angular News Client\"",
-    "create-mac-installer": "",
+    "create-mac-installer": "electron-installer-dmg ./release-builds/Electron",
     "create-win-installer": "",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor"
