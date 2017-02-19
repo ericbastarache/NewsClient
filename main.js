@@ -3,25 +3,20 @@ const path = require('path');
 const url = require('url');
 
 require('dotenv').config();
-require('electron-reload')(__dirname, {
+/*require('electron-reload')(__dirname, {
   electron: require(`${__dirname}/node_modules/electron`)
-});
+});*/
 
 let win;
 
 createWindow = () => {
   win = new BrowserWindow({width: 1000, height: 800});
 
-  if(process.env.PACKAGE === 'true') {
-    win.loadURL(url.format({
-      pathname: path.join(__dirname, 'dist/index.html'),
-      protocol: 'file:',
-      slashes: true
-    }));
-  } else {
-    win.loadURL(process.env.HOST);
-    win.webContents.openDevtools();
-  }
+  win.loadURL(url.format({
+    pathname: path.join(__dirname, 'dist/index.html'),
+    protocol: 'file:',
+    slashes: true
+  }));
 
   const template = [
     {
