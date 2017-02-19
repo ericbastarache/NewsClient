@@ -23,6 +23,29 @@ createWindow = () => {
     win.webContents.openDevtools();
   }
 
+  const template = [
+    {
+      label: 'News Client',
+      submenu: [
+        {
+          label: 'About ...',
+          click: () => {
+            require('electron').shell.openExternal('http://github.com/ericbastarache/NewsClient')
+          }
+        },
+        {
+          label: 'Quit',
+          click: () => {
+            app.quit();
+          }
+        }
+      ]
+    }
+  ];
+
+  const menu = Menu.buildFromTemplate(template);
+  Menu.setApplicationMenu(menu);
+
   win.on('closed', () => {
     win = null;
   });
