@@ -1,6 +1,6 @@
 {
   "name": "news-client",
-  "productName": "Angular News Client",
+  "productName": "AngularNewsClient",
   "description": "Application for viewing news from various sources",
   "version": "0.0.0",
   "main": "main.js",
@@ -12,8 +12,8 @@
     "test": "ng test",
     "package-mac": "ng build --environment=prod --base-href ./dist && electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --icon=assets/icons/mac/icon.icns --prune=true --out=release-builds",
     "package-win": "ng build --environment=prod --base-href ./dist && electron-packager . --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/win/icon.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Angular News Client\"",
-    "create-mac-installer": "electron-installer-dmg ./release-builds/Electron",
-    "create-win-installer": "",
+    "create-mac-installer": "electron-installer-dmg ./release-builds/AngularNewsClient-darwin-x64/AngularNewsClient.app angular-news",
+    "create-win-installer": "node installers/windows/createinstaller.js",
     "pree2e": "webdriver-manager update --standalone false --gecko false",
     "e2e": "protractor"
   },
